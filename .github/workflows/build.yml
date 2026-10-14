@@ -3,20 +3,12 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: devkitpro/devkita64
+    container: devkitpro/devkitarm:latest
     steps:
       - uses: actions/checkout@v4
-      - name: Install tools
-        run: |
-          dkp-pacman -Syu --noconfirm
-          dkp-pacman -S 3ds-dev --noconfirm
-          dkp-pacman -S 3ds-tools --noconfirm
       - name: Build
-        run: |
-          chmod +x build_cia.sh
-          make
-          bash build_cia.sh
-      - name: Upload CIA
+        run: make
+      - name: Upload
         uses: actions/upload-artifact@v4
         with:
           name: Snapchat-3ds-CIA
