@@ -1,0 +1,72 @@
+BasicInfo:
+  Title: FilterCam
+  CompanyCode: "00"
+  ProductCode: CTR-P-FCAM
+  ContentType: Application
+  Logo: Homebrew
+
+TitleInfo:
+  UniqueId: 0xF7E01
+  Category: Application
+
+Option:
+  UseOnSD: true
+  FreeProductCode: true
+  MediaFootPadding: false
+  EnableCrypt: false
+  EnableCompress: true
+
+AccessControlInfo:
+  CoreVersion: 2
+  DescVersion: 2
+  ReleaseKernelMajor: "02"
+  ReleaseKernelMinor: "33"
+  UseExtSaveData: false
+  FileSystemAccess:
+    - DirectSdmc
+  IdealProcessor: 0
+  AffinityMask: 1
+  Priority: 16
+  MaxCpu: 0x9E
+  MemoryType: Application
+  SystemMode: 64MB
+  CpuSpeed: 804MHz
+  EnableL2Cache: true
+  CanAccessCore2: true
+  HandleTableSize: 0x200
+  DisableDebug: false
+  EnableForceDebug: false
+  CanWriteSharedPage: true
+  CanUsePrivilegedPriority: false
+  CanUseNonAlphabetAndNumber: true
+  PermitMainFunctionArgument: true
+  CanShareDeviceMemory: true
+  RunnableOnSleep: false
+  SpecialMemoryArrange: true
+  ResourceLimitCategory: Application
+  SystemSaveDataId1: 0
+  ServiceAccessControl:
+    - APT:U
+    - ac:u
+    - am:net
+    - boss:U
+    - cam:u
+    - cecd:u
+    - cfg:nor
+    - cfg:u
+    - dsp::DSP
+    - frd:u
+    - fs:USER
+    - gsp::Gpu
+    - hid:USER
+    - http:C
+    - mic:u
+    - ndm:u
+    - nwm::UDS
+    - ptm:u
+    - y2r:u
+
+SystemControlInfo:
+  SaveDataSize: 0KB
+  RemasterVersion: 0
+  StackSize: 0x40000
